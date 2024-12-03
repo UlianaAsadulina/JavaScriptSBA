@@ -76,9 +76,11 @@ const e = 'Kevin';
 console.log(a < b);
 console.log(c > d);
 console.log('Name' === 'Name');
+
 // FOR THE NEXT TWO, USE ONLY && OR ||
 console.log(true || false);
 console.log(false && false && false && false && false || true);
+
 console.log(false === false);
 console.log(e === 'Kevin');
 console.log(a + b === c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
@@ -97,3 +99,10 @@ animal = "horse";
 if (animal !== "cow")
     console.log("Hey! You're not a cow.");
 // Commit
+
+// -------------E. Driver's Ed---
+
+// Make a variable that holds a person's age; be semantic
+let personAge = 11;
+// Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+(personAge>=16) ? (console.log("Here are the keys!")) : (console.log("Sorry, you're too young."));
