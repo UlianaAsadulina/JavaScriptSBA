@@ -370,3 +370,133 @@ for (let pants of thomsCloset[1]) {
     };
 }
 console.log(thomsCloset[1]);
+
+
+// -----------------IV. Functions-------------
+
+
+// -------------A. printGreeting-------
+// Do you think you could write a function called printGreeting with a parameter name that returns a greeting with the argument interpolated into the greeting?
+// Like so?
+// console.log(printGreeting("Slimer"));
+// => Hello there, Slimer!
+// You think you could? I think so too. 
+// Feel free to skip this problem, because you've already done it. 
+// If you've done the problem twice, read entire problems carefully before doing them from now on.
+
+function printGreeting(name) {
+    console.log(`Hello there, ${name}!`);
+}
+printGreeting("Mary");
+
+// --------------B. printCool----------
+// Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
+
+function printCool(name) {
+    console.log(`${name} is cool!`);
+}
+printCool("Tonny Stark");
+
+// --------------C. calculateCube------
+// Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
+
+function calculateCube(number) {
+    let v=number*number*number;
+    console.log(`Volume of a cube with side ${number} is ${v}`);
+}
+calculateCube(5);
+
+// --------------D. isVowel-----
+// Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. 
+// The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. 
+
+function isVowel (character) {
+    switch (character.toLowerCase()) {
+        case "a":   
+            return true;
+            break;
+        case "e":
+            return true;
+            break;
+        case "i":
+            return true;
+            break;
+        case "o":
+            return true;
+            break;
+        case "u":
+            return true;
+            break;
+        case "y":
+            return true;
+            break;
+        default: return false;
+        
+    }    
+
+};
+console.log("This is a vowel, " + isVowel("A"));
+console.log("This is a vowel, " + isVowel("n"));
+
+// ---------------E. getTwoLengths-----
+// Write a function getTwoLengths that accepts two parameters (strings). 
+// The function should return an array of numbers where each number is the length of the corresponding string.
+
+function getTwoLengths (string1, string2) {
+    let numArray = [string1.length, string2.length];
+    return numArray;
+}
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
+// ----------------F. getMultipleLengths------
+// Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. 
+// The function should return an array of numbers where each number is the length of the corresponding string.
+
+function getMultipleLengths (arrayOfStrings) {
+    let numArray = [];
+    for (let i=0; i<arrayOfStrings.length; i++) {
+        numArray[i]=arrayOfStrings[i].length;
+    }
+    return numArray;
+}
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+// ------------------G. maxOfThree----
+// Define a function maxOfThree that takes three numbers as arguments and returns the largest of them. 
+// If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. 
+// Be sure to test it with larger values in each of the three locations.
+
+function maxOfThree (num1, num2, num3) {
+    let largestNumber =0;
+    if (num1 >= num2 && num1 >= num3) {
+        largestNumber = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        largestNumber = num2;
+    } else largestNumber = num3;    
+    return largestNumber;
+}
+console.log(maxOfThree(500, 50000, 1000));
+
+// ------------------H. printLongestWord--------
+// Write a function printLongestWord that accepts a single argument, an array of strings. 
+// The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+
+function printLongestWord (arrayOfStrings) {
+    let numArray = [];
+    let largestNumber =0;
+    let returnWord = "";
+    for (let i=0; i<arrayOfStrings.length; i++) {
+        numArray[i]=arrayOfStrings[i].length;        
+        if (numArray[i] == numArray[i-1]) {
+            largestNumber=numArray[i];
+            returnWord=arrayOfStrings[i-1];            
+        } else {
+            if (numArray[i] > largestNumber) {
+                largestNumber=numArray[i];
+                returnWord=arrayOfStrings[i];
+            }
+        }
+    }
+    return returnWord; 
+}
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
