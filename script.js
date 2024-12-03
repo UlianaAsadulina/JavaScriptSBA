@@ -103,6 +103,79 @@ if (animal !== "cow")
 // -------------E. Driver's Ed---
 
 // Make a variable that holds a person's age; be semantic
-let personAge = 11;
-// Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+let personAge = 16;
+
+/* Write code that will print out "Here are the keys!", if the age is 16 years or older, 
+*  or, if the age is younger than 16, a message should print "Sorry, you're too young."*/
 (personAge>=16) ? (console.log("Here are the keys!")) : (console.log("Sorry, you're too young."));
+
+
+// ------------------II. Loops----------------------
+
+// --------------A. The basics-----
+
+// Write a loop that will print out all the numbers from 0 to 10, inclusive
+for (let i=0; i<=10; i++)
+    console.log(i);
+
+console.log("-2-");
+
+// Write a loop that will print out all the numbers from 10 up to and including 400
+for (let i=10; i<=400; i++)
+    console.log(i);
+
+console.log("-3-");
+
+// Write a loop that will print out every third number starting with 12 and going no higher than 4000
+for (let i=12; i<=400; i+=3)
+    console.log(i);
+
+
+// ---------------B. Get even-------
+
+// Print out the numbers that are within the range of 1 - 100
+// Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+for (let i=1; i<=100; i++) {
+    if (i%2===0) 
+        console.log(i + " <-- is an even number");    
+    else 
+        console.log(i);
+}
+
+// --------------C. Give me Five----
+
+// For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+for (let i=0; i<=100; i++) {
+    if (i%5===0 && i!==0) 
+        console.log(`I found a ${i}. High five!`);  
+}  
+
+// Add to the code from above to print out "I found a number. Three is a crowd" if the number is a multiple of three
+for (let i=0; i<=100; i++) {
+    if (i!==0) {
+        if (i%3===0)
+            console.log(`I found a ${i}. Three is a crowd`);
+        if (i%5===0)        
+            console.log(`I found a ${i}. High five!`);
+    }  
+} 
+// For numbers divisible by both three and five, be sure your code prints both messages
+
+// ---------------D. Savings account-------
+
+// Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+let bank_account=0;
+for (let i=1; i<=10; i++) {
+    bank_account+=i;    
+}
+
+// Check your work! Your bank_account should have $55 in it.
+console.log(`Your bank_account have $${bank_account} in it`);
+
+// You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+bank_account=0;
+for (let i=1; i<=100; i++) {
+    bank_account = bank_account + i*2;    
+}
+// Check your work! Your bank_account should have $10,100 in it.
+console.log(`Your bank_account have $${bank_account} in it`);
