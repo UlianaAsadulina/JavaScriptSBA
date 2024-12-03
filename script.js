@@ -84,3 +84,16 @@ console.log(e === 'Kevin');
 console.log(a + b === c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
 console.log(a * a === d); // note: the answer is a simple arithmetic equation, not something "weird"
 console.log(48 == '48');
+
+// -----------D. The farm----
+
+// Declare a variable animal. Set it to be either "cow" or something else
+let animal = "cow";
+// Write code that will print out "mooooo" if the it is equal to cow
+if (animal === "cow")
+    console.log("Mooooo!");
+// Change your code so that if the variable animalis anything other than a cow, it will print "Hey! You're not a cow."
+animal = "horse";
+if (animal !== "cow")
+    console.log("Hey! You're not a cow.");
+// Commit
