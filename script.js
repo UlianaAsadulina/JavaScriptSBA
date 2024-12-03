@@ -612,3 +612,75 @@ function oldAndLoud(person) {
     console.log(person);
 }
 oldAndLoud(user);
+
+
+
+// ******************  Requirements Complete! ****************
+
+// ----------------------Cat Combinator----------------------
+
+// 1. Mama cat
+// Define an object called cat1 that contains the following properties:
+//      name
+//      breed
+//      age (a number)
+
+let mamaCat = {
+    name: "Nala",
+    breed: "siames",
+    age: 2
+}
+// console.log the cat's age
+console.log(mamaCat.age);
+// console.log the cat's breed
+console.log(mamaCat.breed);
+
+
+
+// 2. Papa cat
+// Define an object called cat2 that also contains the properties:
+// name
+// breed
+// age (a number)
+let papaCat ={
+    name: "Simba",
+    breed: "snowshoe",
+    age: 3
+}
+
+
+
+// ----------3. Combine Cats!
+// The cats are multiplying!
+// Write a function combineCats that has two parameters mama, and papa. The function will take two arguments - each a cat object.
+// Pass cat1 and cat2 as arguments to the combineCats function. The function should console.log them.
+
+// function combineCats (cat1, cat2) {
+//     console.log(cat1);
+//     console.log(cat2);
+// }
+// combineCats(mamaCat, papaCat);
+
+// Make it so the combineCatsfunction will return a combination of the two incoming cats
+
+// The result should be an object where in
+// the name is a concatenation of the parents' names
+// the age is 1
+// the breed is each of the parents' breeds with a hyphen in between
+
+function combineCats (cat1, cat2) {
+    let kitten = {};
+    kitten.name = cat1.name + cat2.name;
+    kitten.age = 1;
+    kitten.breed = cat1.breed + "-" + cat2.breed;
+    return kitten;
+ }
+
+// console.log(combineCats(mamaCat, papaCat)); 
+
+//  ---------4. Cat brain bender\
+/* If combineCatsreturns an object, and if combineCatstakes objects as arguments, then it stands to reason that:
+       catCombinatorcan use itself as its own argument.
+Take a second to stew on that . . .*/
+
+console.log(combineCats(combineCats(papaCat, mamaCat), combineCats(mamaCat,papaCat)));
